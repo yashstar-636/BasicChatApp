@@ -1,0 +1,11 @@
+function for google authentication 
+
+
+import {getAuth,GoogleAuthProvider,signInWithPopup} from "firebase/auth"
+import {app} from "./firebase";
+const auth=getAuth(app)
+
+const loginHandler = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth,provider)
+}
